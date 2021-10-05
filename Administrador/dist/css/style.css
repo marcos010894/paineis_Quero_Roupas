@@ -1,0 +1,146 @@
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color:  hsl(45deg 92% 51%)!important;
+    color: black;
+}
+.adicionar{
+    margin-left: 20px;
+    padding: 5%;
+}
+
+
+.get_table{
+    margin-left: 30px;
+    padding: 5%;
+}
+.navbar-white{
+    background-color: hsl(45deg 92% 51%)!important;
+}
+.adicionar_tamanho{
+    border: 0;
+    
+}
+.adicionar_tamanho:hover{
+    color: greenyellow;
+}
+
+.offersAnalitchs{
+    width: 350px;
+    height: auto;
+    background-color: rgb(114, 114, 114);
+    text-align: center;
+    padding: 5px 2%;
+    color: white;
+    border-radius: 15px;
+    box-shadow: black;    
+}
+.inputEditFast{
+    border: 0px;
+    background-color: rgb(114, 114, 114);
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid thistle;
+    margin-bottom: 10px;
+
+}
+.inputEditFast:focus{
+   outline: 0;
+   box-shadow: 0;
+}
+.inputEditFastModal{
+    border: 0px;
+    background-color: white;
+    color: rgb(114, 114, 114);
+    text-align: center;
+    border-bottom: 1px solid thistle;
+    margin-bottom: 10px;
+}
+.inputEditFastModal:focus{
+    outline: 0;
+    box-shadow: 0;
+}
+.imge{
+    width: 100%;
+}
+.divImage{
+    text-align: center;
+}
+/*ADICIONAR IMAGEM*/
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 100%;
+    font-family: sans-serif;
+    margin: 100px auto;
+    padding: 20px;
+  }
+  #drop-area.highlight {
+    border-color: purple;
+  }
+  p {
+    margin-top: 0;
+  }
+  .my-form {
+    margin-bottom: 10px;
+  }
+  #gallery {
+    margin-top: 10px;
+  }
+  #gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .button:hover {
+    background: #ddd;
+  }
+  #fileElem {
+    display: none;
+  }
+
+ /*ADICIONAR IMAGEM*/
+
+ /*Input de registro*/
+ .registro{
+   width: 500px;
+   height: auto;
+   background-color: white;
+   border-radius: 25px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 60px;
+ }
+ .registro input {
+   border: 0;
+   border-bottom: 1px solid rgb(139, 139, 248);
+ }
+ .registro input:focus{
+   outline: 0;
+   border: 0;
+   border-bottom: 1px solid green;
+ }
+
+ #frmRegistroFirebase{
+   display: none;
+ }
+ 
+ #frmRegistro{
+  display: block;
+}
+#btnRegistra{
+  display: block;
+}
+#loading{  
+  display: none;
+  text-align: center;
+}

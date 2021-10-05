@@ -1,0 +1,244 @@
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color:  hsl(45deg 92% 51%)!important;
+    color: black;
+}
+.adicionar{
+    margin-left: 20px;
+    padding: 5%;
+}
+.get_table{
+    margin-left: 30px;
+    padding: 5%;
+}
+.navbar-white{
+    background-color: hsl(45deg 92% 51%)!important;
+}
+.adicionar_tamanho{
+    border: 0;
+    
+}
+.adicionar_tamanho:hover{
+    color: greenyellow;
+}
+.ofertas{
+    text-align: center;
+    margin-top: 150px;
+}
+body{
+    background-color: #f4f6f9!important;
+}
+.button_adc{
+    background-color: #f4f6f9;
+    border: 2px solid rgb(0, 255, 0);
+    font-size: 25px;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 50px;
+    color: rgb(13, 255, 13);
+}
+.inp{
+    display: none;
+}
+.lab{
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10%;
+    background-color: hsl(45deg 92% 51%);
+    width: 200px;
+    color: black;
+    margin-top: 5px;
+}
+.lab:hover{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.lab:focus{
+    background-color: hsl(45deg 92% 51%);
+    color: white;
+}
+
+.field-checkbox1 {
+    position: relative;
+}
+.field-checkbox1 .field {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    opacity: 0;
+    color: red;
+}
+.field-checkbox1 .field:not(:checked) + .description::before {
+    content: url("https://cdn1.iconfinder.com/data/icons/windows8_icons_iconpharm/26/unchecked_checkbox.png");
+    
+}
+
+.field-checkbox1 .field:checked + .description::before {
+    content: url("https://cdn1.iconfinder.com/data/icons/windows8_icons_iconpharm/26/checked_checkbox.png");
+}
+.field-checkbox1 .field:not(:checked) + .description,
+.field-checkbox1 .field:checked + .description {
+   display: flex;
+}
+.field-checkbox1 .field:not(:checked) + .description::before,
+.field-checkbox1 .field:checked + .description::before {
+    margin-right: 10px;
+}
+hr {
+    border: none;
+    height: 2px;
+    /* Set the hr color */
+    color: hsl(45deg 92% 51%); /* old IE */
+    background-color: hsl(45deg 92% 51%); /* Modern Browsers */
+}
+.btn_0{
+    margin-top: 25px;
+    background-color: hsl(45deg 92% 51%);
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
+}
+.btn_0:hover{
+    background-color: white;
+}
+.modelo_input{
+    margin-bottom: 15px;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+.modelo_input:focus{
+    outline: 0;
+    box-shadow: 0 0 0 0;
+    border: 2px solid hsl(45deg 92% 51%);
+}
+textarea{
+    border: 1px solid hsl(45deg 92% 51%);
+}
+label {
+    cursor: pointer;
+    /* Style as you please, it will become the visible UI component. */
+ }
+ 
+ #img-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }
+ /*ADICIONAR IMAGEM*/
+
+ #drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 100%;
+    font-family: sans-serif;
+    margin: 100px auto;
+    padding: 20px;
+  }
+  #drop-area.highlight {
+    border-color: purple;
+  }
+  p {
+    margin-top: 0;
+  }
+  .my-form {
+    margin-bottom: 10px;
+  }
+  #gallery {
+    margin-top: 10px;
+  }
+  #gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .button:hover {
+    background: #ddd;
+  }
+  #fileElem {
+    display: none;
+  }
+
+ /*ADICIONAR IMAGEM*/
+
+ .pedido{
+     text-align: center;
+     margin-top: 50px;
+     width: 500px;    
+     padding: 10px; 
+     background-color: rgb(255, 255, 255);
+     height: auto;
+     margin-bottom: 10px;
+ }
+ .global{
+    text-align: left;
+    margin-top: 50px;
+    width: 300px;    
+    padding: 50px; 
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    margin-bottom: 10px;
+}
+ .avaliation{
+    text-align: center;
+    margin-top: 50px;
+    width: 250px;    
+    padding: 50px; 
+    background-color: rgb(255, 255, 255);
+    height: auto;  
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+ .pedidomodal{
+    text-align: center;
+    margin-top: 10px;
+    width:100%;    
+    padding: 50px; 
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    margin-bottom: 10px;
+}
+ .conteudo{
+     margin-bottom: 5px;
+}
+ @media screen and (max-width: 900px) {
+    .pedido{
+        text-align: center;
+        margin-top: 50px;
+        width: 100%;    
+        padding: 50px; 
+        background-color: rgb(255, 255, 255);
+        height: auto;
+        margin-bottom: 10px;
+    }
+    .avaliation{
+        text-align: center;
+        margin-top: 50px;
+        width: 100%;    
+        padding: 50px; 
+        background-color: rgb(255, 255, 255);
+        height: auto;  
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+    .global{
+        text-align: left;
+        margin-top: 50px;
+        width: 100%;    
+        padding: 50px; 
+        background-color: rgb(255, 255, 255);
+        height: auto;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video | Google Charts</title>
+</head>
+<body>
+    <div id="chart"></div>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { packages: [ 'corechart' ] })
+        google.charts.setOnLoadCallback(drawChart)
+
+        function drawChart() {
+            const container = document.querySelector('#chart')
+            const data = new google.visualization.arrayToDataTable([
+                [ 'Character', 'Valor' ],
+                [ 'Jan', 2000 ],
+                [ 'Fev', 2500 ],
+                [ 'Mar', 3000 ],
+                [ 'Abr', 5000 ],
+                [ 'Maio', 1000 ],
+                [ 'Jun', 1500 ],
+                [ 'Jul', 560 ],
+                [ 'Agot', 1000 ],
+                [ 'Set', 5000 ],
+                [ 'Out', 3500 ],
+                [ 'Nov', 5000 ],
+                [ 'Dez', 7000 ],
+            ])
+            const options = {
+                title: 'Vendas No ano',
+                height: 400,
+                width: 720
+            }
+
+            // const chart = new google.visualization.ColumnChart(container)
+            // const chart = new google.visualization.BarChart(container)
+            // const chart = new google.visualization.LineChart(container)
+            const chart = new google.visualization.LineChart(container)
+            chart.draw(data, options)
+        }
+    </script>
+</body>
+</html>
