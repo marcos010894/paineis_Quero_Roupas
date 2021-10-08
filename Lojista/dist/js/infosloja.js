@@ -146,7 +146,6 @@ var diaVencimentoLoja;
 db.collection("shops").doc(id).collection("orders")
 .onSnapshot((querySnapshot) => {
    querySnapshot.forEach((doc) => {
-
      if(doc.data().status == 0){
          $("#exampleModal").modal()
          doc.data().products.forEach((e)=>{
@@ -256,16 +255,18 @@ function aceitarMo(idPedido, price, uidPedido){
           if(valormes <= 3000 ){
             valorPagar = 200
             document.getElementById('valorFatura').innerHTML = `R$${parseFloat(valorPagar).toFixed(2)}` 
+            console.log(valorPagar)
           }else{          
             valorPagar = (7 / 100) * valormes;
             document.getElementById('valorFatura').innerHTML = `R$${parseFloat(valorPagar).toFixed(2)}`
+            console.log(valorPagar)
           }          
           body = {
             "items": [
                 {
                 "category_id": id,
-                "title": "Quero apps",
-                "description": "Quero apps mensalidade",
+                "title": id,
+                "description": "Quero apps mensalidade.",
                 "quantity": 1,
                 "currency_id": "BRL",
                 "unit_price": valorPagar

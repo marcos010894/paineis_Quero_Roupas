@@ -25,9 +25,6 @@ if(isset($_SESSION['usuario'])){
         outline: 0!important;
         box-shadow: 0 0 0 0!important;
       }
-      #pagamento{
-        display: none;
-      }
         </style>
 
     </div>

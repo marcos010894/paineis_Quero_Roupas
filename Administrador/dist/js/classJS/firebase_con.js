@@ -4,7 +4,7 @@ firebase.initializeApp({
     projectId: "queroroupas-c73b1"
   });
   
-  var db = firebase.firestore();    
+  var db = firebase.firestore();   
 
   var table_category = document.getElementById('tableCategory')
   var id_category = "";
@@ -19,6 +19,7 @@ firebase.initializeApp({
   var table_product = document.querySelector("#tableProduct");
   var id_product= "";
   var id_deleteProduct = "";
+
 
   var json_cidades = {
     "estados": [{
@@ -5744,3 +5745,4 @@ firebase.initializeApp({
         ]
   }]
   };
+  

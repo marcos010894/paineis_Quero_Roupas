@@ -142,10 +142,16 @@
                   <p>Registrar nova Loja</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="addnewuser.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Registrar novo ADM</p>
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a href="users.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Usuarios</p>
                 </a>
               </li>
             </ul>

@@ -9,6 +9,11 @@ if(isset($_SESSION['usuario'])){
 <div class="content-wrapper">
     <div class="container">
         <h1 style="text-align:center;">Usuarios</h1>
+
+        <select class="form-control" name="" onchange="pesquisar(this)" id="pesquisa">
+        <option value="">Selecione a Cidade</option>
+        </select> <br>
+
         <div id="numberUser"></div>
         <div class="container">
         <table class="table">

@@ -62,7 +62,11 @@ class product{
     }
 
 }
-
+db.collection("oferAnalitchs").onSnapshot((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        alert(`Atençao Voce tem uma nova oferta da loja ${doc.data().shopName}`)
+    });       
+  });
 let products = new product()
 products.get_product();
 

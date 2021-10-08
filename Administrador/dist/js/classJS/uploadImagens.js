@@ -64,7 +64,6 @@ function uploadFile(file, i) { // <- Add `i` parameter
     files.forEach(previewFile)
   }
 
-
   /*PROGRESSSSOOOSOO BARRRAAAA */
 let filesDone = 0
 let filesToDo = 0

@@ -24,7 +24,6 @@ class category{
     get_category(){
         db.collection("categories").get().then(querySnapshot => {            
             querySnapshot.forEach(function(doc){
-                console.log(doc.data().name)
                 table_category.innerHTML += `                
                 <tr>
                 <td>${doc.data().name}</td>
@@ -61,6 +60,12 @@ class category{
 
 let categorys = new category()
 categorys.get_category();
+
+db.collection("oferAnalitchs").onSnapshot((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        alert(`Atençao Voce tem uma nova oferta da loja ${doc.data().shopName}`)
+    });       
+  });
 
 function register_category() {
     let categorys = new category(document.getElementById('categoria').value)

@@ -1,11 +1,10 @@
 class city{
-
-    constructor(cidade, estado){
+    constructor (cidade, estado){
         this.cidade = cidade
         this.estado = estado 
     }
 
-    register(){
+    register (){
         db.collection("cities").add({
             id_city: "",
             title: this.cidade,
@@ -17,10 +16,10 @@ class city{
         })
     } 
 
-    get_category(){
+    get_category (){
         db.collection("cities").get().then(querySnapshot => {            
             querySnapshot.forEach(function(doc){
-                console.log(doc.data().name)
+                console.log(doc.data().title)
                 table_City.innerHTML += `                
                 <tr >
                 <td>${doc.data().title}</td>
@@ -125,6 +124,14 @@ function buscaCidades(e){
         document.querySelector("#cidade").innerHTML = '';
     }
   }
+
+
+  db.collection("oferAnalitchs").onSnapshot((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        alert(`Atençao Voce tem uma nova oferta da loja ${doc.data().shopName}`)
+    });       
+  });
+
 
   db.collection("cities").get().then(querySnapshot => {            
     querySnapshot.forEach(function(doc){

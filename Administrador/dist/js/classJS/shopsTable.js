@@ -5,33 +5,34 @@ var mes = String(data.getMonth() + 1).padStart(2, '0');
 var ano = data.getFullYear();
 
 function shops(){    
-docRefShops.get().then(querySnapshot =>{
-    querySnapshot.forEach((doc) =>{
-       document.getElementById('tablesShops').innerHTML += `
-        <tr>
-            <td>${doc.data().name}</td>
-            <td><input type="text" value="${doc.data().priority}" id="${doc.id}prioridade"></td>     
-            <td><input type="text" value="${doc.data().diaVencimento}" id="${doc.id}dia"></td>              
-            <td>${doc.data().CNPJ}</td>
-            <td><button class="btn btn-primary" onclick="statusShop('${doc.id}', '${doc.data().active}', '${doc.data().cityId}')">${doc.data().active}</button></td>
-            <td><button class="btn btn-warning" onclick="lojista('${doc.id}')">Veja mais</button></td>
-            <td><button class="btn btn-success" onclick="atualizainfosLoja('${doc.id}', '${doc.data().priority}', '${doc.data().diaVencimento}')">Alterar</button></td>
-            <td id="${doc.id}"><button class="btn btn-primary" onclick="darbaixa('${doc.id}', '${dia}', '${mes}', '${ano}')" >Dar baixa.</button></td>
-        </tr>
-        `       
-        docRefShops.doc(doc.id).collection('payaments').get().then(querySnapshot => {
-            querySnapshot.forEach((docP) => {
-                console.log(docP.data())
-                if(docP.data().mes > mes & docP.data().ano == ano){                    
-                    document.getElementById(doc.id).innerHTML = `<button class="btn btn-primary" onclick="darbaixa('${doc.id}', '${dia}', '${mes}', '${ano}')" >Dar baixa.</button>`
-                    console.log("teste")
-                }else{                    
-                    document.getElementById(doc.id).innerHTML = `<button class="btn btn-success" >TudoCerto.</button>`
-                }
+    docRefShops.get().then(querySnapshot =>{
+        querySnapshot.forEach((doc) =>{
+        document.getElementById('tablesShops').innerHTML += `
+            <tr>
+                <td>${doc.data().name}</td>
+                <td><input type="text" value="${doc.data().priority}" id="${doc.id}prioridade"></td>     
+                <td><input type="text" value="${doc.data().diaVencimento}" id="${doc.id}dia"></td>              
+                <td>${doc.data().CNPJ}</td>
+                <td><button class="btn btn-primary" onclick="statusShop('${doc.id}', '${doc.data().active}', '${doc.data().cityId}')">${doc.data().active}</button></td>
+                <td><button class="btn btn-warning" onclick="lojista('${doc.id}')">Veja mais</button></td>
+                <td><button class="btn btn-success" onclick="atualizainfosLoja('${doc.id}', '${doc.data().priority}', '${doc.data().diaVencimento}')">Alterar</button></td>
+                <td id="${doc.id}"><button class="btn btn-primary" onclick="darbaixa('${doc.id}', '${dia}', '${mes}', '${ano}')" >Dar baixa.</button></td>
+            </tr>
+            `       
+            docRefShops.doc(doc.id).collection('payaments').get().then(querySnapshot => {
+                querySnapshot.forEach((docP) => {
+                    console.log(docP.data())
+                    if(docP.data().ano == ano){     
+                        switch (docP.data().mes){
+                            case mes:
+                                document.getElementById(doc.id).innerHTML = `<button class="btn btn-success" >TudoCerto.</button>`;
+                                break;
+                        }
+                    }
+                })
             })
         })
     })
-})
 }
 shops()
 
@@ -62,7 +63,7 @@ function pesquisar(param){
             docRefShops.doc(doc.id).collection('payaments').get().then(querySnapshot => {
                 querySnapshot.forEach((docP) => {
                     console.log(docP.data())
-                    if(docP.data().mes > mes & docP.data().ano == ano){                    
+                    if(mes > docP.data().mes  & docP.data().ano == ano){                    
                         document.getElementById(doc.id).innerHTML = `<button class="btn btn-primary" onclick="darbaixa('${doc.id}', '${dia}', '${mes}', '${ano}')" >Dar baixa.</button>`
                         console.log("teste")
                     }else{                    
@@ -186,6 +187,12 @@ function darbaixa(id, dia, mes, ano){
         mes:mes,
         ano:ano
     }).then(()=>{
-        document.location.reload(true);
+        alert("treste")
     })
 }
+
+  db.collection("oferAnalitchs").onSnapshot((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        alert(`Atençao Voce tem uma nova oferta da loja ${doc.data().shopName}`)
+    });       
+  });

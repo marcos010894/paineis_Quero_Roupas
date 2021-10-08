@@ -187,6 +187,8 @@ let table = document.getElementById('bodyTable')
            })
        })
 
+
+
         function setOffer(id, idCity, idCategory){
             docRefMiniOffer.doc(id).get().then((doc) =>{
                 docVar = doc.data()
